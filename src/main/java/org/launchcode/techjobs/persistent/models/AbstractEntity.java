@@ -14,8 +14,8 @@ public abstract class AbstractEntity {
     @GeneratedValue
     private int id;
 
-    @NotBlank(message = "Please enter a name.")
-    @Size(max = 100, message = "Please enter a shorter name.")
+    @Size(min=1, max = 250)
+    @NotBlank
     private String name;
 
     public int getId() {
